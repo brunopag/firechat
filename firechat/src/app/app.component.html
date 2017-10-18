@@ -9,6 +9,8 @@
   <h1>Firechat</h1>
   <hr>
 
+  <!-- Si el usuario esta logueado, muestra el componente chat y el boton de logout. Si no esta logueado muestra el comp login -->
+
   <div class="row" *ngIf="_chatService.usuario">
     <div class="col-md-12 text-right">
       <button (click)="salir()"

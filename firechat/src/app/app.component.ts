@@ -14,6 +14,7 @@ export class AppComponent {
   }
 
   salir(){
+    //llama al metodo del servicio para el logout.
     this._chatService.logout();
   }
 }

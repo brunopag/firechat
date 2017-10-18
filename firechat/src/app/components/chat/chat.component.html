@@ -3,6 +3,8 @@
 
 <div id="app-mensajes" class="app-mensajes">
 
+<!-- Desde la vista se accede al arreglo de chats del servicio y se hace la lógica para ver quien es el autor y modificar la clase
+del elemento segun corresponda. Para esto se usa el ngFor y ngClass -->
   <div *ngFor="let chat of _chatService.chats | async"
   [ngClass]="{'text-right': _chatService.usuario.uid == chat.uid}">
     <span class="badge" [ngClass]="{'badge-primary': _chatService.usuario.uid == chat.uid,
@@ -16,6 +18,7 @@
   </div>
 </div> -->
 
+<!-- el [(ngModel)] hace que se modifique la variable mensaje con el valor del input -->
 <input [(ngModel)]="mensaje"
         name="mensaje"
         (keyup.enter)="enviar()"
